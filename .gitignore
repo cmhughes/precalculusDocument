@@ -1,0 +1,20 @@
+._*
+*.tcp
+*.php
+*.out
+webstuff
+localSettings.yaml
+ideas.*
+overview.*
+# doccover.*
+graph.*
+shortsolutions*
+longsolutions*
+*.log
+*.aux
+*.mtc*
+*.thm
+*.prb
+*.toc
+*.idx
+*.maf

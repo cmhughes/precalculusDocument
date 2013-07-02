@@ -1,0 +1,45 @@
+\documentclass{article}
+\usepackage{background}
+\usepackage{pgfplots}
+\usepackage{geometry}
+
+
+\SetBgColor{gray}
+\SetBgContents{%
+		\begin{tikzpicture}
+			\begin{axis}[
+                    width=10cm,
+					axis x line=middle,
+					axis y line=middle,
+					line width=1pt,
+                    color=gray!40,
+					tick label style={font=\tiny},
+				xmin=-3,xmax=5,
+				ymin=-5,ymax=3,
+				xlabel={$x$},
+				ylabel={$y$},
+				grid=major,
+				xtick={-3,...,5},
+				ytick={-5,...,3},
+				]
+				\addplot[red!40,<->,>=stealth]expression[domain=-2:4,samples=100]{-(1/2)^x};
+			\end{axis}
+		\end{tikzpicture}
+}
+\SetBgScale{4.5}
+\SetBgAngle{30}
+%\SetBgPosition{current page.north}
+\SetBgPosition{5cm,-13cm}
+
+\begin{document}
+
+\pagestyle{empty}
+\begin{center}
+    \Huge
+    %\sffamily
+    \bfseries MATH 111 \& 112 document
+
+    \vspace{14cm}
+    A document for the students of PCC.
+\end{center}
+\end{document}
