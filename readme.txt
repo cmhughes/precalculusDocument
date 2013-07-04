@@ -14,7 +14,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 This document started at Portland Community College; some 
-activity happened between February 2011 and January 2012.
+activity happened between February 2011 and December 2012.
 
 Ethos:
     Modelling-based approach to pre-calculus materials: 
@@ -51,8 +51,10 @@ Features:
       which are \inputted at the end
     - the problem numbers hyperlink to their respective solutions,
       and the solution numbers hyperlink back to the problems
-    - the hyperlinks for even and odd problems can be switched
+    - the hyperlinks for even and odd problems can be toggled
       separately
+    - problems can be tagged as 'core' which puts a star by them (and their 
+      solution), and creates a list of core problems per section
 
 Ideas for the future:
     - chapter by chapter index
