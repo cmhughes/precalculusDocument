@@ -2,7 +2,7 @@
 *.tcp
 *.php
 *.out
-webstuff
+#webstuff
 localSettings.yaml
 ideas.*
 overview.*
@@ -18,3 +18,4 @@ longsolutions*
 *.toc
 *.idx
 *.maf
+*.pdf

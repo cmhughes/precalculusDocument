@@ -1,0 +1,599 @@
+<?php
+	// Set up a divboxcounter
+    // for the collapsable boxes
+	$divboxCount = -1;
+?>
+<table class="plain">
+	<tr>
+		<td class="box">
+        <h3>Exponential Functions (see Chapter <?php echo prepCrossRef($exponentialfunctions,1); ?>)</h3>
+         Exponential functions have the form  `f(x) = a b^x` where 
+         both `a` and `b>0` are real numbers. We call `b` the base.
+		</td>
+		<td class="picbox">	
+ \begin{graph} 
+ width=180; height=180; xmin=-5; xmax=5; ymin=-5; ymax=5; xscl=1; plot(e^x); 
+ \end{graph}
+		</td>
+	</tr>
+</table>
+        <a href="javascript:void(0)" onclick="toggleAll(0)">Open all</a>
+        <a href="javascript:void(0)" onclick="toggleAll(1)">Close all</a>
+
+		
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+                &sect;<?php echo prepCrossRef($exponentialmodeling);?>: Exponential modelling
+       </a> <?php decorate(MathML);?>
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+In this example we consider exponential modelling; in particular, given two points `(x_1,y_1)` and 
+`(x_2,y_2)`, can we find an exponential function `f(x)=ab^x` that goes through both points?
+        <?php
+            $exampleName = "exponentialModelling";
+    		algorithmicexample($exampleName);
+        ?>
+        </div>
+
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+                &sect;<?php echo prepCrossRef($expotherapplications);?>: Exponential vs linear modelling
+    </a> <?php decorate(MathML);?>
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+In this example we compare exponential modelling to linear modelling; in particular, given two points `(x_1,y_1)` and 
+`(x_2,y_2)`, can we find an exponential function `f(x)=ab^x` that goes through both points, and can we find a linear 
+model `f(x)=mx+b` that also goes through the two points?
+        <?php
+            $exampleName = "expvslinModelling";
+    		algorithmicexample($exampleName);
+        ?>
+        </div>
+
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+		&sect;<?php echo prepCrossRef($expotherapplications);?>: Linear and exponential regression
+       </a><?php decorate(Calculator);?>
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+ See Problem  <?php echo prepCrossRef($pressureproblem,1); ?>.
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+		Linear regression
+    </a>
+</h4>
+
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+See Figure <?php echo prepCrossRef($pressureLinFigure,1); ?>.
+<br>
+<br>
+Choose your calculator:
+<form action="javscript:void(0)">
+    <input name="calcchoice" type="radio" onchange=calculatortoggle("linregTI89","linregCasio")>TI-89<br>
+    <input name="calcchoice" type="radio" onchange=calculatortoggle("linregCasio","linregTI89")>Casio Classpad
+</form>
+
+<div id="linregTI89" style="display: none;" class="changeable">
+
+<table class="calculator">
+ <th></th><th>Screenshots </th><th>Keystrokes</th>
+ <tr><td>1</td><td><img src="images/calculatorscreens/TI89/linreg01.BMP"></td>
+  <td>
+ </td></tr>
+    <tr><td>2</td><td><img src="images/calculatorscreens/TI89/linreg02.BMP"></td>
+     <td> 
+    </td></tr>
+ <tr><td>3</td><td><img src="images/calculatorscreens/TI89/linreg03.BMP"></td>
+  <td>
+ </td></tr>
+    <tr><td>4</td><td><img src="images/calculatorscreens/TI89/linreg04.BMP"></td>
+     <td>
+    </td></tr>
+    <tr><td>5</td><td><img src="images/calculatorscreens/TI89/linreg05.BMP"></td>
+     <td></td></tr>
+    <tr><td>6</td><td><img src="images/calculatorscreens/TI89/linreg06.BMP"></td>
+     <td></td></tr>
+    <tr><td>7</td><td><img src="images/calculatorscreens/TI89/linreg07.BMP"></td>
+     <td></td></tr>
+    <tr><td>8</td><td><img src="images/calculatorscreens/TI89/linreg08.BMP"></td>
+     <td></td></tr>
+ <tr><td>9</td><td><img src="images/calculatorscreens/TI89/linreg09.BMP"></td>
+  <td>
+ </td></tr>
+    <tr><td>10</td><td><img src="images/calculatorscreens/TI89/linreg10.BMP"></td>
+     <td> 
+    </td></tr>
+ <tr><td>11</td><td><img src="images/calculatorscreens/TI89/linreg11.BMP"></td>
+  <td>
+ </td></tr>
+    <tr><td>12</td><td><img src="images/calculatorscreens/TI89/linreg12.BMP"></td>
+     <td>
+    </td></tr>
+    <tr><td>13</td><td><img src="images/calculatorscreens/TI89/linreg13.BMP"></td>
+     <td></td></tr>
+    <tr><td>14</td><td><img src="images/calculatorscreens/TI89/linreg14.BMP"></td>
+     <td></td></tr>
+    <tr><td>15</td><td><img src="images/calculatorscreens/TI89/linreg15.BMP"></td>
+     <td></td></tr>
+    <tr><td>16</td><td><img src="images/calculatorscreens/TI89/linreg16.BMP"></td>
+     <td></td></tr>
+</table>
+</div>
+
+<div id="linregCasio" style="display: none;" class="changeable">
+
+<table class="calculator">
+ <th></th><th>Screenshots </th><th>Keystrokes</th>
+ <tr><td>1</td><td><img src="images/calculatorscreens/CasioClasspad/regression01.gif"></td>
+  <td>Open the spreadsheet application.</td></tr>
+    <tr><td>2</td><td><img src="images/calculatorscreens/CasioClasspad/regression02.gif"></td>
+     <td>If necessary, clear the table.</td></tr>
+ <tr><td>3</td><td><img src="images/calculatorscreens/CasioClasspad/regression03.gif"></td>
+  <td>Enter the data.</td></tr>
+    <tr><td>4</td><td><img src="images/calculatorscreens/CasioClasspad/regression04.gif"></td>
+     <td>Highlight the A and B columns by dragging the stylus across the column headings.  Then select scatter plot.</td></tr>
+    <tr><td>5</td><td><img src="images/calculatorscreens/CasioClasspad/regression05.gif"></td>
+     <td>Select the linear model from the drop down regression menu.</td>
+    </tr>
+    <tr><td>6</td><td><img src="images/calculatorscreens/CasioClasspad/regression06.gif"></td>
+     <td>You can copy down the equation now if you like, or you can just close this box to get back to the data because ...</td></tr>
+    <tr><td>7</td><td><img src="images/calculatorscreens/CasioClasspad/regression07.gif"></td>
+     <td>If you tap on the regression line the formula for y appears at the bottom of the screen.</td></tr>
+</table>
+</div>
+</div>
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+		Exponential regression
+    </a>
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+See Figure <?php echo prepCrossRef($pressureExpFigure,1); ?>.
+<br>
+<br>
+Choose your calculator:
+<form action="javscript:void(0)">
+    <input name="calcchoice" type="radio" onchange=calculatortoggle("expregTI89","expregCasio")>TI-89<br>
+    <input name="calcchoice" type="radio" onchange=calculatortoggle("expregCasio","expregTI89")>Casio Classpad
+</form>
+
+<div id="expregTI89" style="display: none;" class="changeable">
+<table class="calculator">
+ <th></th><th>Screenshots </th><th>Keystrokes</th>
+ <tr><td>1</td><td><img src="images/calculatorscreens/TI89/expreg01.BMP"></td>
+  <td>
+ </td></tr>
+    <tr><td>2</td><td><img src="images/calculatorscreens/TI89/expreg02.BMP"></td>
+     <td> 
+    </td></tr>
+ <tr><td>3</td><td><img src="images/calculatorscreens/TI89/expreg03.BMP"></td>
+  <td>
+ </td></tr>
+    <tr><td>4</td><td><img src="images/calculatorscreens/TI89/expreg04.BMP"></td>
+     <td>
+    </td></tr>
+    <tr><td>5</td><td><img src="images/calculatorscreens/TI89/expreg05.BMP"></td>
+     <td></td></tr>
+    <tr><td>6</td><td><img src="images/calculatorscreens/TI89/expreg06.BMP"></td>
+     <td></td></tr>
+    <tr><td>7</td><td><img src="images/calculatorscreens/TI89/expreg07.BMP"></td>
+     <td></td></tr>
+    <tr><td>8</td><td><img src="images/calculatorscreens/TI89/expreg08.BMP"></td>
+     <td></td></tr>
+ <tr><td>9</td><td><img src="images/calculatorscreens/TI89/expreg09.BMP"></td>
+  <td>
+ </td></tr>
+    <tr><td>10</td><td><img src="images/calculatorscreens/TI89/expreg10.BMP"></td>
+     <td> 
+    </td></tr>
+ <tr><td>11</td><td><img src="images/calculatorscreens/TI89/expreg11.BMP"></td>
+  <td>
+ </td></tr>
+    <tr><td>12</td><td><img src="images/calculatorscreens/TI89/expreg12.BMP"></td>
+     <td>
+    </td></tr>
+    <tr><td>13</td><td><img src="images/calculatorscreens/TI89/expreg13.BMP"></td>
+     <td></td></tr>
+    <tr><td>14</td><td><img src="images/calculatorscreens/TI89/expreg14.BMP"></td>
+     <td></td></tr>
+    <tr><td>15</td><td><img src="images/calculatorscreens/TI89/expreg15.BMP"></td>
+     <td></td></tr>
+</table>
+</div>
+
+<div id="expregCasio" style="display: none;" class="changeable">
+<table class="calculator">
+ <th></th><th>Screenshots </th><th>Keystrokes</th>
+ <tr><td>1</td><td><img src="images/calculatorscreens/CasioClasspad/regression08.gif"></td>
+  <td>Open the spreadsheet application.</td></tr>
+    <tr><td>2</td><td><img src="images/calculatorscreens/CasioClasspad/regression09.gif"></td>
+     <td>If necessary, clear the table.</td></tr>
+ <tr><td>3</td><td><img src="images/calculatorscreens/CasioClasspad/regression10.gif"></td>
+  <td>Enter the data.</td></tr>
+    <tr><td>4</td><td><img src="images/calculatorscreens/CasioClasspad/regression11.gif"></td>
+     <td>Highlight the A and B columns by dragging the stylus across the column headings.  Then select scatter plot.</td></tr>
+    <tr><td>5</td><td><img src="images/calculatorscreens/CasioClasspad/regression12.gif"></td>
+     <td>Select the exponential model from the drop down regression menu.</td>
+    </tr>
+    <tr><td>6</td><td><img src="images/calculatorscreens/CasioClasspad/regression13.gif"></td>
+     <td>You can copy down the equation now if you like, or you can just close this box to get back to the data because ...</td></tr>
+    <tr><td>7</td><td><img src="images/calculatorscreens/CasioClasspad/regression14.gif"></td>
+     <td>If you tap on the regression curve the formula for y appears at the bottom of the screen.  
+      You may now sit back smugly while your TI brethren spend the next 15 minutes trying to get 
+      their calculators to do the same thing.</td></tr>
+</table>
+</div>
+</div>
+</div>
+
+
+
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+                &sect;<?php echo prepCrossRef($thenumbere);?>: The magical number `e`
+    </a> <?php decorate(Calculator);?>
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+Choose your calculator:
+<form action="javscript:void(0)">
+    <input name="calcchoice" type="radio" onchange=calculatortoggle("exploreEulerTI89","exploreEulerCasio")>TI-89<br>
+    <input name="calcchoice" type="radio" onchange=calculatortoggle("exploreEulerCasio","exploreEulerTI89")>Casio Classpad
+</form>
+
+<div id="exploreEulerTI89" style="display: none;" class="changeable">
+<table class="calculator">
+ <th></th><th>Screenshots </th><th>Keystrokes</th>
+ <tr><td>1</td><td><img src="images/calculatorscreens/TI89/EXPLOREEULER1.BMP"></td>
+  <td>Press Diamond F1 to go to the Y= screen, and enter `(1+1/x)^x` into y1
+ </td></tr>
+    <tr><td>2</td><td><img src="images/calculatorscreens/TI89/EXPLOREEULER2.BMP"></td>
+     <td>Press Diamond F4 to go to the TblSet screen, and change the Independent to ASK.
+    </td></tr>
+ <tr><td>3</td><td><img src="images/calculatorscreens/TI89/EXPLOREEULER3.BMP"></td>
+  <td>Press Diamond F5 to go to the TABLE screen.
+ </td></tr>
+    <tr><td>4</td><td><img src="images/calculatorscreens/TI89/EXPLOREEULER4.BMP"></td>
+     <td>Enter the x-values shown- the y-values should appear as you enter the x-values.
+    </td></tr>
+    <tr><td>5</td><td><img src="images/calculatorscreens/TI89/EXPLOREEULER5.BMP"></td>
+     <td>To see more decimals of any x or y-value, just navigate to the number and it shows more digits in the display area at the bottom.</td></tr>
+    <tr><td>6</td><td><img src="images/calculatorscreens/TI89/EXPLOREEULER6.BMP"></td>
+     <td>Press HOME to go to the home screen, and enter "y1(10000)" as shown.</td></tr>
+    <tr><td>7</td><td><img src="images/calculatorscreens/TI89/EXPLOREEULER7.BMP"></td>
+     <td>Now enter e^(1). Note that you will find `e^x` by pressing Diamond X.</td></tr>
+</table>
+</div>
+
+<div id="exploreEulerCasio" style="display: none;" class="changeable">
+<table class="calculator">
+ <th></th><th>Screenshots </th><th>Keystrokes</th>
+ <tr><td>1</td><td><img src="images/calculatorscreens/CasioClasspad/exploreEuler1.png"></td>
+  <td>From the Menu screen, tap "Graph & Table". Using the 2D tab, enter `(1+1/x)^x` into y1, 
+   making sure that the item is checked after finishing.
+ </td></tr>
+    <tr><td>2</td><td><img src="images/calculatorscreens/CasioClasspad/exploreEuler2.png"></td>
+     <td>Tap the "table" icon, second from the left at the top. Select the first entry as shown.
+    </td></tr>
+ <tr><td>3</td><td><img src="images/calculatorscreens/CasioClasspad/exploreEuler3.png"></td>
+  <td>Tap the "Resize" icon at the bottom of the screen while the bold outline is around the table.
+ </td></tr>
+    <tr><td>4</td><td><img src="images/calculatorscreens/CasioClasspad/exploreEuler4.png"></td>
+     <td>Type the number 1, and a new screen will pop up. Tap ok. The y-value should have changed 
+      to a 2.
+    </td></tr>
+    <tr><td>5</td><td><img src="images/calculatorscreens/CasioClasspad/exploreEuler5.png"></td>
+     <td>Fill in your table as shown. To add (or delete) extra rows, tap "T-Fact" at the top of the 
+      screen and "Insert" a row where you want it. To see more decimals of any y-value, just tap the 
+     number and it shows 10 digits in the display area at the bottom.</td>
+    </tr>
+    <tr><td>6</td><td><img src="images/calculatorscreens/CasioClasspad/exploreEuler6.png"></td>
+     <td>Tap the "Main" icon at the bottom. Enter "y1(10000)" as shown (the letter "y" can be found on the 
+      "abc" tab) and press execute. This is another way of finding data.</td></tr>
+    <tr><td>7</td><td><img src="images/calculatorscreens/CasioClasspad/exploreEuler7.png"></td>
+     <td>Now, in the 2D menu, enter `e^1` and press execute. To change your answer to a decimal either 
+      change your mode from "Standard" to "Decimal" at the bottom of the screen or use the "fraction to decimal" 
+    button at the top left.</td></tr>
+</table>
+</div>
+</div>
+
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+                &sect;<?php echo prepCrossRef($thenumbere);?>: Exploring `Q(t)=ae^(kt)` <?php decorate(GeoGebra);?>
+       </a> 
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/3.2/unsigned/"
+	width="896" height="538"mayscript="true">
+	<param name="ggbBase64" value="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"/>
+	<param name="image" value="http://www.geogebra.org/webstart/loading.gif"  />
+	<param name="boxborder" value="false"  />
+	<param name="centerimage" value="true"  />
+	<param name="java_arguments" value="-Xmx512m -Djnlp.packEnabled=true" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.46.0, 3.2.46.0, 3.2.46.0, 3.2.46.0, 3.2.46.0, 3.2.46.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="false" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="false" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="false" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+		
+</div>
+
+
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+                &sect;<?php echo prepCrossRef($exponentialexploration); ?>: Exploring exponential functions graphically
+    </a> <?php decorate(GeoGebra);?>
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+This interactive worksheet is designed to help you explore limits at infinity of the exponential
+function: `f(x) = a b^x + c`. 
+In the following applet you can change, `a`, `b`, and `c`. Try varying them, and then consider the statements
+following the applet.
+<br><br>
+<applet name="ggbApplet" code="geogebra.GeoGebraApplet" archive="geogebra.jar"
+	codebase="http://www.geogebra.org/webstart/3.2/unsigned/"
+	width="744" height="482" mayscript="true">
+    <param name="ggbBase64" value="UEsDBBQACAAIAId2fD4AAAAAAAAAAAAAAAAMAAAAZ2VvZ2VicmEueG1s3Vjtbts2FP29PgWhH0G7LrIkW7G9Wim2dMACpFuBZMWwZR0oiZK5SKJHUomcYQ+wB9mL7Ul2SerLdh3HWYtlE2CIuiQvL8+595jS7GWVZ+iacEFZEViu7ViIFBGLaZEGVimTw4n18vjJLCUsJSHHKGE8xzKwhrZnKXtJj598MhNzdoNwpoe8peQmsBKcCWIhseAEx2JOiFyx47KiGcV8+W34C4mk6DqMk9NiUcIqkpdgi/L4jIrmcaAXXGRUvqLXNCYcZSwKrCMfQofWW8IljXAWWCPHWLzA8tY6wTRUvXPG6S0rpBreOU/AgpCgtwQQ8ZRtNtAbnZEyymhMcaE2o+OAQQjd0FjOA2s8GoFLQtM5xDqaOMZbxBiPz5dCkhxVPxDOYG1/bB/1rjHMW5oubzi2xysXgAgRQyieZ3v9y53ArO19enFyfU6kBDIFwhURDaIpp3G/fSq+ZFnckrBgtJAneCFLrvNgWJvO5VItBsBxtckvijQjtc0FmuYkugpZdW6AGxrXF8uFnqLDCdMTljGOuKLEhwH1PTR3PUbF2Y5y9BhHj6h9KKdtvzv19Ah9D81dj8poYUKr9+02m3adZhkqkDKAc5W+DRwZDglkg4XKgsqz5gGy5qrbqRr/TZmHUDb9vGlduh/I5WywlnCzK8ILkpm0KoDXkpUCXav0NdTpOGIS0RweTUcNCFZkfQcBGGtMUk6auE3NGbh070rqrplngyYIFYOAWCMJ4gH7kWovX1ULVhCIDWcoKQvdJz5HZzSnEpJQIlokFMJYKhGQUICB9Yrb6MRGX5fpnAgLxViCH6UuJCM5uEJS51BR5oTTqMUTWypGCKysw3PtOuu1HDGtLGscdGRB95YsAw1azDG0bLfOJbwElekDo729ZnGzcL1spuUop6Ckh76S0hxXgaVbOBQsKyU5jwD24oxFWGrFNdHVAuI6jhqr5ky0FC+hNVWNhFakq8/3y1aX8nIOuVUQIRT7NXpN2heQGpovEKSF2SSoNFHe9ZLNaLSAbevqbzML0tEQspOacJ0akCf30XADILs1N8MHcePU3LiO/x8kJ1onR+fqg8hpRNzQ47uPpHb8hp/R5HHyU8GxSKgjVwNvAseuCjwmT6tnKEAYfYrCd6r9HAFxgw1OG2W1OgdbdzFa28U/qUDPGfU4du7JsXMHxqvR3Y1SWqOUGpTuh0x6D2Rcfxc0vb/X1QIw5w/PwDP8WOCYAPvoRCzPcRGjAufQf2r4p+rYjLADRY7++uNPpEsCu4F18GvJ5Ivn5gYmrzHVFrOxUrbT32SleA3nC2HWrVfbQFuSSnbC0k3aALMuvrvR3Kb1e0IpJObyjTqwIqUH7sR2h77TXb4WB8/2j/pWKOVbU8b7IR2ig1S+QG4D9WnyI0YHGZgg8M+QAfjwEo49cmkeGmPf9tMmKbr214lREJ8WyR6sNDMeFSW+PZ5uUnLo2aPxx+BkA1YN9kOZWudEp/x+pLRTHhUrU3s66aGvtH4vVjYV+8KtJdtgp/7egpYGDD/z8LS1ha3t2buqI6xVlm1/iCvowqoPUvMPBCsVZ/iCfG9sa58VBBzFku7ziH5VBphF82b9Xl4gAmc07V0NL9NJnxdnsgcx3goxlxnNf/6tQpf6xR5zDsiZpP8dmTNJy0WjJztJ8HaQsN95/9/mAF4ux9NNDnzbXymZfWpjuJOCwy0ctPKxk4Th/6sSXHs8WpMixcLY9lbMw20sDPqfLPR3vfrD5vHfUEsHCORBaX4cBQAAChUAAFBLAQIUABQACAAIAId2fD7kQWl+HAUAAAoVAAAMAAAAAAAAAAAAAAAAAAAAAABnZW9nZWJyYS54bWxQSwUGAAAAAAEAAQA6AAAAVgUAAAAA"/>
+	<param name="image" value="http://www.geogebra.org/webstart/loading.gif"  />
+	<param name="boxborder" value="false"  />
+	<param name="centerimage" value="true"  />
+	<param name="java_arguments" value="-Xmx512m" />
+	<param name="cache_archive" value="geogebra.jar, geogebra_main.jar, geogebra_gui.jar, geogebra_cas.jar, geogebra_export.jar, geogebra_properties.jar" />
+	<param name="cache_version" value="3.2.44.0, 3.2.44.0, 3.2.44.0, 3.2.44.0, 3.2.44.0, 3.2.44.0" />
+	<param name="framePossible" value="false" />
+	<param name="showResetIcon" value="false" />
+	<param name="showAnimationButton" value="true" />
+	<param name="enableRightClick" value="false" />
+	<param name="errorDialogsActive" value="true" />
+	<param name="enableLabelDrags" value="false" />
+	<param name="showMenuBar" value="false" />
+	<param name="showToolBar" value="false" />
+	<param name="showToolBarHelp" value="false" />
+	<param name="showAlgebraInput" value="false" />
+	<param name="allowRescaling" value="true" />
+Sorry, the GeoGebra Applet could not be started. Please make sure that Java 1.4.2 (or later) is installed and active in your browser (<a href="http://java.sun.com/getjava">Click here to install Java now</a>)
+</applet>
+<ol>
+	<li>
+		Given the following conditions, decide if the statements are true or false. 
+        <br>
+		`b>1` and `a` is any real number
+		<ol type=a>
+			<li>as `x rightarrow oo`, `f(x) rightarrow c`</li>
+			<li>as `x rightarrow -oo`, `f(x) rightarrow c`</li>
+			<li>`f(0)=a+c`</li>
+			<li>`f(x)` is an increasing function</li>
+			<li>`f(x)` is a decreasing function</li>	
+			<li>`f(x)` is concave up</li>
+			<li>`f(x)` is concave down</li>
+		</ol>
+	</li>
+	<li>
+		Given the following conditions, decide if the statements are true or false. 
+        <br>
+		 `0< b<1` and `a` is any real number 
+		<ol type=a>
+			<li>as `x rightarrow oo`, `f(x) rightarrow c`</li>
+			<li>as `x rightarrow -oo`, `f(x) rightarrow c`</li>
+			<li>`f(0)=a+c`</li>
+			<li>`f(x)` is an increasing function</li>
+			<li>`f(x)` is a decreasing function</li>	
+			<li>`f(x)` is concave up</li>
+			<li>`f(x)` is concave down</li>
+		</ol>
+	</li>
+	<li>
+		In each of the following cases, give the formula of an exponential function that has the described properties:
+		<ol type=a>
+			<li>an increasing function that has a horizontal asymptote at y=3 as x tends towards infinity</li>
+			<li>an increasing function that has a horizontal asymptote at y=3 as x tends towards -infinity</li>
+			<li>a decreasing function that has a horizontal asymptote at y=-5 as x tends towards infinity</li>
+			<li>a decreasing function that has a horizontal asymptote at y=-5 as x tends towards -infinity</li>
+		</ol>
+	</li>
+</ol>
+</div>
+
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+	                &sect;<?php echo prepCrossRef($exponentialexploration); ?>:	Graphing exponential functions
+    </a> <?php decorate(MathML);?>
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+This example has only 2 steps:
+<ol>
+ <li>the first step draws a function- before moving on to the second step, you should try your hardest to find 
+ a formula for the function;</li>
+ <li>the second step gives the formula for the function- were you right?</li>
+</ol>
+        <?php
+            $exampleName = "randomfunction";
+    		algorithmicexample($exampleName);
+        ?>
+        </div>
+
+
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+                &sect;<?php echo prepCrossRef($solvingexponentialeqns);?>: Solving exponential equations
+    </a><?php decorate(MathML);?>
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+ See Problem <?php echo prepCrossRef($exponentialIntSolns,1);?>. There are 3 possible outcomes in each 
+ of the equations of this type:
+ <ul>
+  <li>0 real solutions</li>
+  <li>1 real solution</li>
+  <li>2 real solutions</li>
+ </ul>
+ Once you are familiar with the process, see if you can predict steps 2, 3, and 4.
+        <?php
+            $exampleName = "solveExpEqnFactor";
+    		algorithmicexample($exampleName);
+        ?>
+        </div>
+
+<?php $divboxCount++; ?>
+<h4>
+	<a href="javascript:void(0)" onclick="toggle(<?php echo "'bx",$divboxCount,"','px",$divboxCount,"'"; ?>)" class="heading">
+
+		<img src="images/rightbutton.gif" id="<?php echo "px",$divboxCount; ?>" class="changeable"
+				alt="1/0" align="top" border="0" height="20" width="20">
+
+	                &sect;<?php echo prepCrossRef($solvingexponentialeqns);?>: Solving exponential equations using your calculator
+    </a> <?php decorate(Calculator);?>
+</h4>
+
+<div id="<?php echo "bx",$divboxCount; ?>" style="display: none;" class="changeable">
+Choose your calculator:
+<form action="javscript:void(0)">
+ <input name="calcchoice" type="radio" onchange=calculatortoggle("solveExponentialTI89","solveExponentialClassPad")>TI-89<br>
+    <input name="calcchoice" type="radio" onchange=calculatortoggle("solveExponentialClassPad","solveExponentialTI89")>Casio Classpad
+</form>
+
+The following screenshots show how to solve the exponential equation `2^x=7` using 
+your calculator.
+
+<div id="solveExponentialTI89" style="display: none;" class="changeable">
+<table class="calculator">
+ <th></th><th>Screenshots </th><th>Keystrokes</th>
+ <tr><td>1</td><td><img src="images/calculatorscreens/TI89/SOLVEEXPONENTIAL1.BMP"></td>
+  <td>
+   Enter `y1` and `y2` as shown.
+ </td></tr>
+    <tr><td>2</td><td><img src="images/calculatorscreens/TI89/SOLVEEXPONENTIAL2.BMP"></td>
+     <td> 
+      View your graph on the standard viewing window.
+    </td></tr>
+ <tr><td>3</td><td><img src="images/calculatorscreens/TI89/SOLVEEXPONENTIAL3.BMP"></td>
+  <td>
+   Press F5 and arrow down to "Intersection".
+ </td></tr>
+    <tr><td>4</td><td><img src="images/calculatorscreens/TI89/SOLVEEXPONENTIAL4.BMP"></td>
+     <td>
+      The cursor should go to `y1` by default; press ENTER.
+    </td></tr>
+    <tr><td>5</td><td><img src="images/calculatorscreens/TI89/SOLVEEXPONENTIAL5.BMP"></td>
+     <td>
+       The cursor should now go to `y2`; press ENTER. 
+    </td></tr>
+    <tr><td>6</td><td><img src="images/calculatorscreens/TI89/SOLVEEXPONENTIAL6.BMP"></td>
+     <td>
+      The "Lower Bound" should be anywhere to the left of the point of 
+      intersection.
+    </td></tr>
+    <tr><td>7</td><td><img src="images/calculatorscreens/TI89/SOLVEEXPONENTIAL7.BMP"></td>
+     <td>
+      The "Upper Bound" should be anywhere to the right of the point 
+      of interesection.
+    </td></tr>
+    <tr><td>8</td><td><img src="images/calculatorscreens/TI89/SOLVEEXPONENTIAL8.BMP"></td>
+     <td>
+        The point of intersection should be shown. 
+    </td></tr>
+</table>
+</div>
+
+<div id="solveExponentialClassPad" style="display: none;" class="changeable">
+<table class="calculator">
+ <th></th><th>Screenshots </th><th>Keystrokes</th>
+ <tr><td>1</td><td><img src="images/calculatorscreens/CasioClasspad/solveexponential1.png"></td>
+  <td>
+   Tap on the Graphs and Tables icon on the menu screen. Enter the two formulas 
+   shown into `y1` and `y2`. Make sure the items are checked and graph them.
+ </td></tr>
+    <tr><td>2</td><td><img src="images/calculatorscreens/CasioClasspad/solveexponential2.png"></td>
+     <td> 
+      Press the resize button at the bottom of the screen. Change your window if 
+      necessary to see both `y1` and `y2` clearly.
+    </td></tr>
+ <tr><td>3</td><td><img src="images/calculatorscreens/CasioClasspad/solveexponential3.png"></td>
+  <td>
+   Once both graphs are clearly shown, tap on the "Analysis" menu at the top, then "G-solve" and select "Intersect".
+ </td></tr>
+    <tr><td>4</td><td><img src="images/calculatorscreens/CasioClasspad/solveexponential4.png"></td>
+     <td>
+      The point of intersection automatically is found. The coordinates `(xc,yc)` . In this case, 
+      the intersection point is approximately at `(2.8073549,7)`.  If you happened to have more than one 
+      intersection point, simply press the left or right arrows to scroll between the intersections.
+    </td></tr>
+</table>
+
+</div>
+</div>
+
+
+need spreadsheet and screenshots from Jeff: 4/10/11<br>
+need description to go with Jeff's e^kt activity 4/10/11
