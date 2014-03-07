@@ -68,3 +68,21 @@ Ideas for the future:
 Disclaimer:
     - if you find any mistakes, feel free to fix them and push your 
       version back up to git
+
+How to contribute:
+    FIRST-TIME contributions:
+    - create an account on github
+    - fork this project
+    - clone it using 
+            git clone https://github.com/cmhughes/precalculusDocument.git
+    - make sure you stay up to date by running 
+            git add remote upstream https://github.com/cmhughes/precalculusDocument.git
+
+    SUBSEQUENT contributions
+    - grab the latest version using 
+            git fetch upstream
+            git merge upstream/master
+    - make your changes
+    - push your changes up to your fork using 
+            git push
+    - submit a pull request from within your fork on github
