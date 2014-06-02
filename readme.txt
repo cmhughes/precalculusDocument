@@ -13,6 +13,14 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+pureLaTeX:
+    this branch contains the original workings of the document; 
+    we intend to convert all of the .tex files into .xml files so that
+    they can be run through xslt to be converted into both .tex and
+    .html files
+
+    this branch should, essentially, be considered obsolete
+
 This document started at Portland Community College; some 
 activity happened between February 2011 and December 2012.
 
